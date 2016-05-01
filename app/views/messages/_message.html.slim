@@ -1,6 +1,6 @@
 - cache message do
-  .message_content
-    |  <span data-msg-id="
-    = message.id
-    | " class="message"> 
-    = message.content
+  p data-msg-id="#{message.id}" class="message"
+    .user
+      = message.user.username
+    .content
+      = message.content

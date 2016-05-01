@@ -1,5 +1,5 @@
 class RoomsController < ApplicationController
   def show
-    @messages = Message.all
+    @messages = Message.last(10)
   end
 end

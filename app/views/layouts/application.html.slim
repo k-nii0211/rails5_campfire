@@ -4,8 +4,11 @@ html
     title
       | Campfire
     = csrf_meta_tags
-    = action_cable_meta_tag
+    - if user_signed_in?
+      = action_cable_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
   body
+    p
+
     = yield
