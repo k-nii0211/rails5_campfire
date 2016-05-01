@@ -13,7 +13,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'devise'
 gem 'slim-rails'
 
-# gem 'react-rails'
+gem 'react-rails'
 gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
 gem 'redis', '~> 3.0'
@@ -30,4 +30,5 @@ group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'bullet'
 end

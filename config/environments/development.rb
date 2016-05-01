@@ -63,4 +63,12 @@ Rails.application.configure do
   # Action Cable endpoint configuration
   # config.action_cable.url = 'wss://example.com/cable'
   config.action_cable.allowed_request_origins = %W(http://localhost:3000 http://192.168.11.3:3000)
+
+  config.react.variant = :development
+
+  config.after_initialize do
+    Bullet.enable = true
+    Bullet.alert = true
+    Bullet.console = true
+  end
 end

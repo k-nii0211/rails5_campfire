@@ -1,15 +1,12 @@
 h1
   | Chat room
 - if user_signed_in?
-  h4
+  .logged_in
     | logged in #{current_user.username}
-
-
-- if user_signed_in?
-  p
-    = link_to 'logout', destroy_user_session_path, method: :delete
+    span class="logout_link"
+      = link_to 'logout', destroy_user_session_path, method: :delete
 - else
-  p
+  .logged_in
     = link_to 'login', user_session_path
 
 = render 'messages/messages', messages: @messages

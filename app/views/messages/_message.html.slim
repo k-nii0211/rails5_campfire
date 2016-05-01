@@ -1,6 +1,8 @@
 - cache message do
-  p data-msg-id="#{message.id}" class="message"
+  div id="message_#{message.id}" class="message"
     .user
       = message.user.username
-    .content
+    div class="content"
       = message.content
+      span class="content_edit"
+        = link_to 'edit', edit_message_path(message)
